@@ -9,7 +9,7 @@ import './About.css';
 const About = ()=>{
     return(
         <div className="section-container">
-            <Header heading="About Me." details="Front-End Developer | Competitive Programmer | I am a young , dynamic B.Tech 3rd Year Student with excellent problem-solving skill and ability to perform well in a team. Passionate towards learning new skills and gaining new skillsets and working on them." />
+            <Header heading="About Me." details="Front-End Developer | Competitive Programmer | I am a young , dynamic B.Tech student with excellent problem-solving skill and ability to perform well in a team. Passionate towards learning new skills and gaining new skillsets and working on them." />
 
             <div className="about-main">
                 <div className="about-main-left">
