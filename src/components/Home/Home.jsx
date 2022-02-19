@@ -7,7 +7,7 @@ const Home = ()=>{
     return(
         <div className="home-container">
             <div className="header-text">
-                <h1>Welcome to my Portfolio!!!!!!</h1>
+                <h1>Welcome to my Portfolio!</h1>
                 <p>Hello!! This is Pranav , a front-end developer!</p>
             </div>
             <div className="head-btns">
