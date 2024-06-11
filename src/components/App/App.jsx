@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { HashRouter as Router , Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './../Home/Home';
 import About from './../About/About';
 import Skills from './../Skills/Skills';
@@ -9,20 +9,22 @@ import Contact from './../Contact/Contact';
 import NavBar from '../NavBar/NavBar';
 import GoHome from '../GoHome/GoHome';
 
-const App = ()=>{
-    return(
+const App = () => {
+    return (
         <div>
-        <Router>
-            <div>
-                <NavBar />
-                <Route path="/" exact component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/skills" component={Skills} />
-                <Route path="/projects" component={Projects} />
-                <Route path="/contact" component={Contact} />
-                <GoHome />
-            </div>
-        </Router>
+            <Router>
+                <div>
+                    <NavBar />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/skills" element={<Skills />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                    <GoHome />
+                </div>
+            </Router>
         </div>
     );
 }

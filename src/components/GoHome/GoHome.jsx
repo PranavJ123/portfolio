@@ -1,24 +1,25 @@
-import React, {Component} from 'react';
-import { withRouter } from 'react-router';
+import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './GoHome.css';
 
 import homeIconWhite from './../../assets/home_white.png';
 import homeIconBlack from './../../assets/home_black.png';
 
-class GoHome extends Component{
-    navigateToHome = ()=>{
-        const {history} = this.props;
-        history.push('/');
+const GoHome = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const navigateToHome = () => {
+        navigate('/');
     }
-    render(){
-        const {location} = this.props;
-        const whiteBtn = location.pathname === '/';
-        return(
-            <button className={`go-home-btn ${whiteBtn ? 'white-bkg' : 'gradient-bkg'}`} onClick={this.navigateToHome}>
-            <img src={whiteBtn ? homeIconBlack : homeIconWhite} alt="home-icon" className="home-icon"  />
-            </button>
-        )
-    }
+
+    const whiteBtn = location.pathname === '/';
+
+    return (
+        <button className={`go-home-btn ${whiteBtn ? 'white-bkg' : 'gradient-bkg'}`} onClick={navigateToHome}>
+            <img src={whiteBtn ? homeIconBlack : homeIconWhite} alt="home-icon" className="home-icon" />
+        </button>
+    );
 }
 
-export default withRouter(GoHome);
+export default GoHome;
