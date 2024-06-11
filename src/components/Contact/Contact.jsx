@@ -21,7 +21,6 @@ const Contact = ()=>{
                         Send Email
                     </button>
                 </form>
-
             </div>
 
             <div className="social-icons-container">
@@ -31,9 +30,9 @@ const Contact = ()=>{
                 <a href="https://www.linkedin.com/in/pranav-jain-b706b01b1/" className="social-icon">
                     <img src={linkedin} alt="social" />
                 </a>
-                <a href="https://www.instagram.com/pranav.jain1912/" className="social-icon">
+                {/* <a href="https://www.instagram.com/pranav.jain1912/" className="social-icon">
                     <img src={instagram} alt="social" />
-                </a>
+                </a> */}
                 <a href="https://pranavj123.github.io/portfolio" className="social-icon">
                     <img src={web} alt="social" />
                 </a>
